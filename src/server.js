@@ -38,6 +38,9 @@ require("dotenv").config();
 
 server.use("/", require("./routes/Prueba"));
 
+server.use("/delivery", require("./routes/Delivery"));
+server.use("/collection", require("./routes/Collection"));
+
 // !Listen
 const PORT = process.env.EXPRESSPORT || 8001;
 server.listen(PORT, () => {
